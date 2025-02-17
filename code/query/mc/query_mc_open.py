@@ -104,7 +104,7 @@ def multiple_choice_prompt(x, choices, bullet_point_blocks):
     return prompt, correct_answer, choice_conn_dict
 
 # Load dataset
-df = pd.read_csv(explica_path, sep="\t")
+df = pd.read_csv(explica_path, sep=",")
 
 # Generate prompts for each sentence pair
 df[['prompt', 'correct_answer', 'answers_dict']] = df.apply(
