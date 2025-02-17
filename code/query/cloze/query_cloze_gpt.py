@@ -90,7 +90,7 @@ def check_file_exists(file_path):
 
 # Load dataset
 try:
-    df_in = pd.read_csv(explica_path, sep="\t")
+    df_in = pd.read_csv(explica_path, sep=",")
     print(f"Dataset loaded: {explica_path} ({df_in.shape[0]} rows)")
 except Exception as e:
     print(f"Error loading dataset: {e}")
