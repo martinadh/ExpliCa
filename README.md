@@ -49,7 +49,7 @@ Each sentence was rated by 15 English native speakers
 * order_human: the order of the relation expressed by the item according to humans
 * condition_human: relation type and order expressed by the item according to humans
 * tested_connective: connective used to join the sentence pair in the item
-* additional_dimension: if the item contains socially challenging topics (if yes, they are in a specific section of the dataset: data/explica/socially_challenging)
+* additional_dimension: values are 'socially_challenging' (see the dedicated section of the readme) or 'none'. 
 
 ### Dataset License
 
@@ -57,7 +57,7 @@ The dataset is made publicly available under the Creative Commons Attribution-No
 
 ### Socially challenging items
 
-Among the causal sentence pairs in ExpliCa, 50 are labeled as 'socially challenging' under the 'additinal_dimension' column, indicating content that touches on sensitive or potentially offensive topics such as religion, abortion, immigration, gender identity, drug abuse, and bribery. 
+Among the causal sentence pairs in ExpliCa, 50 are labeled as 'socially challenging' under the 'additinal_dimension' column. This annotation indicates that the item content touches on sensitive or potentially offensive topics such as religion, abortion, immigration, gender identity, drug abuse, and bribery. 
 *Some items may be offensive to certain groups.*
 The themes contained in these items were added to evaluate whether bias-mitigation strategies in LLMs would impact PCD performance. We plan to explore such aspects more in-depth in future works.
 
