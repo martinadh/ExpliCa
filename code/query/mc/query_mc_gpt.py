@@ -97,7 +97,7 @@ def check_file_exists(file_path):
     return Path(file_path).exists()
 
 # Load dataset
-df_in = pd.read_csv(explica_path, sep="\t")
+df_in = pd.read_csv(explica_path, sep=",")
 
 # Generate prompts for each sentence pair
 df_in[['prompt', 'correct_answer', 'answers_dict']] = df_in.apply(multiple_choice_prompt, result_type='expand', axis=1, choices=choices, bullet_point_blocks=bullet_point_blocks)
