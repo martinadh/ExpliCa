@@ -102,7 +102,7 @@ for model_id in models:
         results.extend(responses)
     
     # Store results in DataFrame
-df['generated_answer_outlines'] = results
+    df['generated_answer_outlines'] = results
 
     # Cleanup memory
     del outlines_model, generator
@@ -126,7 +126,7 @@ df['generated_answer_outlines'] = results
         results.append(gen_text)
     
     # Store results in DataFrame
-df['generated_answer_greedy'] = results
+    df['generated_answer_greedy'] = results
 
     # Save results to TSV file
     model_name = model_id.split("/")[1]
