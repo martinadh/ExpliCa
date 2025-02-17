@@ -2,7 +2,7 @@
 ## Evaluating Explicit Causal Reasoning in Large Language Models
 
 ExpliCa (Explicit Causality) is a dataset designed to evaluate LLMs on commonsense causal reasoning through causal discovery tasks, more specifically via Pairwise Causal Discovery (PCD), which focuses on determining the existence of a causal relationship between two events and establishing the causal direction, that is, identifying which event serves as the cause and which as the effect.
-In ExpliCa PCD is formulated so that allows to take into account also the entanglement of causal and temporal relations between events. 
+In ExpliCa PCD is formulated to take into account also the entanglement of causal and temporal relations between events. 
 
 This repository contains
 * The dataset with human annotation and models' answers
@@ -18,7 +18,7 @@ ExpliCa contains 600 sentence pairs, each presented in both possible orders. Eac
 * A precede B > “then”
 * B precede A > “after”
 
-## Human ratings 
+### Human ratings 
 We collected human acceptability ratings concerning the connective in each sentence via crowdsourcing. Subjects rated on a scale from 1 to 10 how acceptable the connective is to express the relation between the events in the sentences.
 For example:
 * Jude walked under the rain for an hour, so Jude got sick: Rating 10 (highly acceptable)
@@ -26,7 +26,7 @@ For example:
 Each sentence was rated by 15 English native speakers
 
 
-## Structure
+### Structure
 * Pair_ID: ID of the sentence pair
 * Sentence_A: sentence A
 * Sentence_B: sentence B
@@ -37,6 +37,23 @@ Each sentence was rated by 15 English native speakers
 * human_preferred_connective: connective for which humans provided the highest average rating
 * human_preferred_connective_desc: indication of order (iconic vs anti-iconic) and relation (causal vs temporal) of the connective for which humans provided the highest average rating
 
+#### Additional columns in the 4800 version
+
+* origin: to which dataset the sentence pair originally belonged
+* frequency: the frequency of the triplets \{Sent1verb, connective, Sent2verb\} computed on enTenTen21
+* freq_cat: the frequency category assigned to the item according to the frequency quartile ranges
+* human_preferred_connective_unrel: if according to the applied threshold on human ratings, the item belongs to the unrelated group
+* tested_relation: the relation type expressed by the connective in the item (causal vs temporal)
+* tested_order: the order expressed by the connective in the item (iconic vs anti-iconic)
+* relation_human: the relation type expressed by the item according to humans
+* order_human: the order of the relation expressed by the item according to humans
+* condition_human: relation type and order expressed by the item according to humans
+* tested_connective: connective used to join the sentence pair in the item
+* additional_dimension: if the item contains socially challenging topics (if yes, they are in a specific section of the dataset: data/explica/socially_challenging)
+
+### Dataset License
+
+The dataset is made publicly available under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license, which allows redistribution, adaptation, and reuse for non-commercial purposes, provided proper attribution is given and derivative works are shared under the same terms. However, the dataset cannot be used for training artificial intelligence models or other machine learning systems.
 
 # The Evaluation
 
@@ -45,12 +62,12 @@ Human ratings served as ground truth for the evaluation of seven LLMs:
 * falcon-7b-instruct
 * Meta-Llama-3.1-8B-Instruct 
 * gemma-2-9b-it 
-* Qwen2.5-7B-Instruct (with also versions of 0.5, 1.5, 3, 7, 14, 32B)
+* Qwen2.5-7B-Instruct (with also versions of 0.5, 1.5, 3, 7, 14, 32B for acceptability ratings in few-shot settings)
 * gpt4o 
 * gpt4o-mini
   
 The evaluation covers four key tasks:
-* Three prompting tasks (Acceptability rating task, cloze test and multiple-choice) under different conditions (Few-shot and zero-shot setups, Greedy search vs. the Outlines framework) for response generation
+* Three prompting tasks (Acceptability rating task, cloze test, and multiple-choice) under different conditions (Few-shot and zero-shot setups, Greedy search vs. the Outlines framework) for response generation
 * Perplexity evaluation
 
 For performance assessment, we used accuracy as the primary metric.
@@ -58,3 +75,6 @@ For performance assessment, we used accuracy as the primary metric.
 Finally, we analyzed the models' acceptability rating distributions and compared them to human ratings, assessing their correlation with human judgment.
 
 This repository provides insights into model behavior and evaluation methodologies, offering valuable benchmarks for future research.
+
+
+
