@@ -65,7 +65,7 @@ def multiple_choice_prompt(x, choices, bullet_points):
     return multiple_choice(x['Sentence_A'], x['Sentence_B'], connectivesstring, bullet_points_string)
 
 # Load dataset
-df = pd.read_csv(explica_path, sep="\t")
+df = pd.read_csv(explica_path, sep=",)
 
 # Generate prompts for each sentence pair
 df['prompt'] = df.apply(multiple_choice_prompt, axis=1, choices=connective_list, bullet_points=bullet_points)
