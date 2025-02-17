@@ -75,10 +75,9 @@ For performance assessment, we used accuracy as the primary metric.
 
 Finally, we analyzed the models' acceptability rating distributions and compared them to human ratings, assessing their correlation with human judgment.
 
-This repository provides insights into model behavior and evaluation methodologies, offering valuable benchmarks for future research.
-
+This repository provides insights into model behavior and evaluation methodologies, offering valuable benchmarks for future research:
 * The folder code contains python scripts and notebook used to query the models and analyze the answers
-* The folder data/res/ contains the models' answers to each task. data/socially_challening folder.
+* The folder data/res/ contains the models' answers to each task. 
 * The folder imgs contains some plots describing the analysis computed over ExpliCa by evaluating the LLMs.
 
 N.B: Results are reported also for socially_challening items. Before accessing the results, read the readme inside the data/socially_challening folder.
