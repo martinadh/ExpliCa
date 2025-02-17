@@ -82,7 +82,7 @@ def is_token_in_vocab(token, tokenizer):
     return token_id != tokenizer.unk_token_id  # Returns True if token exists in vocabulary
 
 # Load dataset from TSV file
-df = pd.read_csv(explica_path, sep="\t")
+df = pd.read_csv(explica_path, sep=",")
 
 
 
