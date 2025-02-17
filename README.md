@@ -64,6 +64,7 @@ The themes contained in these items were added to evaluate whether bias-mitigati
 
 # The Evaluation
 
+## Models
 Human ratings served as ground truth for the evaluation of seven LLMs: 
 * Mistral-7B-Instruct-v0.3 
 * falcon-7b-instruct
@@ -72,14 +73,20 @@ Human ratings served as ground truth for the evaluation of seven LLMs:
 * Qwen2.5-7B-Instruct (with also versions of 0.5, 1.5, 3, 7, 14, 32B for acceptability ratings in few-shot settings)
 * gpt4o 
 * gpt4o-mini
-  
+
+## Tasks
 The evaluation covers four key tasks:
 * Three prompting tasks (Acceptability rating task, cloze test, and multiple-choice) under different conditions (Few-shot and zero-shot setups, Greedy search vs. the Outlines framework) for response generation
 * Perplexity evaluation
 
+## Evaluation metrics
 For performance assessment, we used accuracy as the primary metric.
 
+## Other analyses
 Finally, we analyzed the models' acceptability rating distributions and compared them to human ratings, assessing their correlation with human judgment.
+
+
+# Repo description
 
 This repository provides insights into model behavior and evaluation methodologies, offering valuable benchmarks for future research:
 * The folder code contains python scripts and notebook used to query the models and analyze the answers
