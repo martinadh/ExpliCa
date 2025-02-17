@@ -55,6 +55,12 @@ Each sentence was rated by 15 English native speakers
 
 The dataset is made publicly available under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license, which allows redistribution, adaptation, and reuse for non-commercial purposes, provided proper attribution is given and derivative works are shared under the same terms. However, the dataset cannot be used for training artificial intelligence models or other machine learning systems.
 
+### Socially challenging items
+
+Among the causal sentence pairs in ExpliCa, 50 are labeled as 'socially challenging' under the 'additinal_dimension' column, indicating content that touches on sensitive or potentially offensive topics such as religion, abortion, immigration, gender identity, drug abuse, and bribery. 
+*Some items may be offensive to certain groups.*
+The themes contained in these items were added to evaluate whether bias-mitigation strategies in LLMs would impact PCD performance. We plan to explore such aspects more in-depth in future works.
+
 
 # The Evaluation
 
@@ -80,4 +86,4 @@ This repository provides insights into model behavior and evaluation methodologi
 * The folder data/res/ contains the models' answers to each task. 
 * The folder imgs contains some plots describing the analysis computed over ExpliCa by evaluating the LLMs.
 
-N.B: Results are reported also for socially_challening items. Before accessing the results, read the readme inside the data/socially_challening folder.
+
