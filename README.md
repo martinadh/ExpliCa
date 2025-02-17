@@ -55,6 +55,7 @@ Each sentence was rated by 15 English native speakers
 
 The dataset is made publicly available under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license, which allows redistribution, adaptation, and reuse for non-commercial purposes, provided proper attribution is given and derivative works are shared under the same terms. However, the dataset cannot be used for training artificial intelligence models or other machine learning systems.
 
+
 # The Evaluation
 
 Human ratings served as ground truth for the evaluation of seven LLMs: 
@@ -76,5 +77,8 @@ Finally, we analyzed the models' acceptability rating distributions and compared
 
 This repository provides insights into model behavior and evaluation methodologies, offering valuable benchmarks for future research.
 
+* The folder code contains python scripts and notebook used to query the models and analyze the answers
+* The folder data/res/ contains the models' answers to each task. data/socially_challening folder.
+* The folder imgs contains some plots describing the analysis computed over ExpliCa by evaluating the LLMs.
 
-
+N.B: Results are reported also for socially_challening items. Before accessing the results, read the readme inside the data/socially_challening folder.
