@@ -86,7 +86,7 @@ def filter_unprocessed_rows(input_df, output_df, compare_columns):
 
 # Load dataset
 try:
-    df = pd.read_csv(explica_path, sep="\t")
+    df = pd.read_csv(explica_path, sep=",")
     print(f"Dataset loaded: {explica_path} ({df.shape[0]} rows)")
 except Exception as e:
     print(f"Error loading dataset: {e}")
