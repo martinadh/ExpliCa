@@ -18,6 +18,6 @@ The code for the analyses is provided in Jupyter Notebooks. In each notebook, pa
 
 ## Other
 
-This folder contains the notebooks for other analyses and plots: distribution & correlation, incremental model size, and error analysis.
+This folder contains the notebooks for other analyses and plots: frequency, distribution & correlation, incremental model size, and error analysis.
 
 
