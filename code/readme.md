@@ -13,6 +13,11 @@ The provided code is only for few-shot learning. Commenting the "Examples" part 
 The answer analysis consists of two steps:
 * Answer cleaning: must be applied to answers returned by the models in the greedy search setup
 * outline_accuracy and greedy_accuracy, allow for computing accuracy in these two setups along with perplexity.
+  
+The code for the analyses is provided in Jupyter Notebooks. In each notebook, paths to files are defined in a Python dictionary.
+
+## Other
+
+This folder contains the notebooks for other analyses and plots: distribution & correlation, incremental model size, and error analysis.
 
 
-The code for the analysis is provided in Jupyter Notebooks. In each notebook, paths to files are defined in a Python dictionary.
