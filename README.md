@@ -94,3 +94,29 @@ This repository provides insights into model behavior and evaluation methodologi
 * The folder imgs contains some plots describing the analysis computed over ExpliCa by evaluating the LLMs.
 
 
+#### Reference
+If you use any material from this repository, please cite this paper:
+```
+@inproceedings{miliani-etal-2025-explica,
+    title = "{E}xpli{C}a: Evaluating Explicit Causal Reasoning in Large Language Models",
+    author = "Miliani, Martina  and
+      Auriemma, Serena  and
+      Bondielli, Alessandro  and
+      Chersoni, Emmanuele  and
+      Passaro, Lucia  and
+      Sucameli, Irene  and
+      Lenci, Alessandro",
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2025",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-acl.891/",
+    pages = "17335--17355",
+    ISBN = "979-8-89176-256-5"
+}
+```
